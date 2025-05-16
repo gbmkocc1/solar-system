@@ -42,3 +42,17 @@ jobs:
 
         - name: Unit-Testing
           run: npm test
+
+        docker:
+            name: Containerization
+            needs: [Unit-Testing]
+            runs-on: ubuntu-latest
+            steps:
+            - name: Checkout Repo
+              uses: actions/checkout@v4
+
+            - name: Dockerhub Login
+              uses: docker/login-actions@v2.2.0
+              with:
+                username: ${{ vars.DOCKERHUB_USERNAME }}
+                password: ${{ secrets.DOCKERHUB_TOKEN }}      
