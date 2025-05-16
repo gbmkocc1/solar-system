@@ -55,4 +55,4 @@ jobs:
               uses: docker/login-actions@v2.2.0
               with:
                 username: ${{ vars.DOCKERHUB_USERNAME }}
-                password: ${{ secrets.DOCKERHUB_TOKEN }}      
+                password: ${{ secrets.DOCKERHUB_PASSWORD }}      
