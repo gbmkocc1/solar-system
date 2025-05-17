@@ -69,7 +69,7 @@ jobs:
             docker images
             docker run --name solar-system-app -d \
                 -p 3000:3000 \
-                -e MONGO_URL-$MONGO_URL \
+                -e MONGO_URL=$MONGO_URL \
                 -e MONGO_USERNAME=$MONGO_USERNAME \
                 -e MONGO_PASSWORD=$MONGO_PASSWORD \
                 gbmkocc1/solar-system:${{ github.sha }}
