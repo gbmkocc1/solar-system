@@ -92,4 +92,4 @@ jobs:
             context: .
             push: true
             tags: gbmkocc1/solar-system:${{ github.sha }}
-                  ghcr.io/${{ github.repository_owner }}/solar-system/${{ github.sha }}
+                  ghcr.io/${{ github.repository_owner }}/solar-system:${{ github.sha }}
