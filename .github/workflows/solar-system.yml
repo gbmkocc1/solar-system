@@ -19,13 +19,11 @@ jobs:
           mongo-db:
             image: gbmkocc1/solar-system
             ports:
-              - 27017:27017
-                
-env:
-    MONGO_URL: 'mongodb//localhost:27017/superData'
-    MONGO_USERNAME: non-prod-username
-    MONGO_PASSWORD: non-prod-password
-
+              - 27017:27017      
+        env:
+            MONGO_URL: 'mongodb//localhost:27017/superData'
+            MONGO_USERNAME: non-prod-username
+            MONGO_PASSWORD: non-prod-password
         strategy:
             matrix:
                 nodejs_version: [18, 19, 20]
