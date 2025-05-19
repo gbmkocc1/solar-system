@@ -17,7 +17,7 @@ jobs:
         name: unit-testing
         services:
             mongo-db:
-                image: docker pull gbmkocc1/solar-system:latest
+                image: gbmkocc1/solar-system:latest
                 ports:
                   - 27017:27017
         env:
